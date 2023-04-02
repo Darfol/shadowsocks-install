@@ -219,12 +219,12 @@ setupProfile(){
     apt -y update
     apt -y install curl wget unzip gcc swig automake make perl cpio build-essential
     if [ $DEPMARK -ne 0 ]; then
-        apt -y install python2 python2-dev libssl-dev
-        curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
-        python2 get-pip.py
+        apt -y install python3 python3-dev libssl-dev
+        curl https://bootstrap.pypa.io/pip/3.6/get-pip.py --output get-pip.py
+        python3 get-pip.py
         pip2 install setuptools m2crypto
     else
-        apt -y install python python-dev python-pip python-setuptools python-m2crypto
+        apt -y install python3 python3-dev python3-pip python3-setuptools python3-m2crypto
     fi
     # Return Home
     cd ${cur_dir}
@@ -287,7 +287,7 @@ programInstall(){
     fi
 
     cd ${cur_dir}/shadowsocks-master
-    python2 setup.py install --record /usr/local/shadowsocks_install.log
+    python3 setup.py install --record /usr/local/shadowsocks_install.log
 
     if [ -f /usr/bin/ssserver ] || [ -f /usr/local/bin/ssserver ]; then
         chmod +x /etc/init.d/shadowsocks
