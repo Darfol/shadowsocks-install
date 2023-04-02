@@ -33,7 +33,7 @@ Automatically deploy servers and Optimize the shadowsocks server on Linux.
 ### Download
 
 ```bash
-# wget https://raw.githubusercontent.com/Vndroid/shadowsocks-install/master/shadowsocks.sh
+# wget https://raw.githubusercontent.com/Darfol/shadowsocks-install/master/shadowsocks.sh
 # chmod +x shadowsocks.sh
 ```
 
